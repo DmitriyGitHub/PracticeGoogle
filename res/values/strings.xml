@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PracticeGoogle</string>
+    <string name="example_1">RecyclerView</string>
+    <string name="action_reset">Сбросить</string>
+</resources>
