@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <!-- lesson3 -->
-        <activity android:name=".recyclerview.MainActivityLessonThree"></activity>
+        <activity android:name=".recyclerview.MainActivityLessonThree"/>
+        <activity android:name=".DataBinding.MainActivityDataBinding"/>
     </application>
 
 </manifest>
