@@ -1,4 +1,4 @@
-package ru.valerevich.dmitriy.practicegoogle.DataBinding.model;
+package ru.valerevich.dmitriy.practicegoogle.databinding.model;
 
 import android.support.annotation.NonNull;
 
@@ -24,15 +24,15 @@ public class User {
     }
 
     public @NonNull void setName(String name) {
-        this.mName = String.valueOf(name);
+        mName = name;
     }
 
-    public @NonNull int getInn() {
-        return mInn;
+    public @NonNull String getInn() {
+        return String.valueOf(mInn);
     }
 
     public @NonNull void setInn(int inn) {
-        this.mInn = mInn;
+        mInn = mInn;
     }
 
     public @NonNull UUID getUserId() {

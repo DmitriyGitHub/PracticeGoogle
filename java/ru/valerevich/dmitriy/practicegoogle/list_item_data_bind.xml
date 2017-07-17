@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
-<data>
+<data class="ListItemDataBindBinding">
     <variable
         name="user"
         type="ru.valerevich.dmitriy.practicegoogle.databinding.model.User"/>
@@ -12,6 +12,7 @@
     android:padding="16dp">
 
     <TextView
+        android:id="@+id/tv_item_name"
         style="@style/TextAppearance.AppCompat.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,6 +22,7 @@
         android:text="@{user.name}" />
 
     <TextView
+        android:id="@+id/tv_item_inn"
         style="@style/TextAppearance.AppCompat.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

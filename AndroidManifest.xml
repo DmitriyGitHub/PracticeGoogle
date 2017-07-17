@@ -17,7 +17,7 @@
         </activity>
         <!-- lesson3 -->
         <activity android:name=".recyclerview.MainActivityLessonThree"/>
-        <activity android:name=".DataBinding.MainActivityDataBinding"/>
+        <activity android:name=".databinding.MainActivityDataBinding"/>
     </application>
 
 </manifest>

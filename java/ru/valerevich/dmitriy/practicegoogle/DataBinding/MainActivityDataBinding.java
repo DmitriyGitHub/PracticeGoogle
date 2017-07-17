@@ -1,4 +1,4 @@
-package ru.valerevich.dmitriy.practicegoogle.DataBinding;
+package ru.valerevich.dmitriy.practicegoogle.databinding;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,10 +9,10 @@ import android.view.MenuItem;
 
 import java.util.ArrayList;
 
-import ru.valerevich.dmitriy.practicegoogle.DataBinding.model.User;
+import ru.valerevich.dmitriy.practicegoogle.databinding.model.User;
 import ru.valerevich.dmitriy.practicegoogle.R;
 
-public class MainActivityDataBinding extends AppCompatActivity{
+public class MainActivityDataBinding extends AppCompatActivity {
 
     private RecyclerViewAdapter mAdapter;
     private RecyclerView mNumbersList;
@@ -60,15 +60,17 @@ public class MainActivityDataBinding extends AppCompatActivity{
         return super.onOptionsItemSelected(item);
     }
 
-    private void createAdapter(){
+    private void createAdapter() {
         mAdapter = new RecyclerViewAdapter(getData(10));
         mNumbersList.setAdapter(mAdapter);
     }
 
-    private ArrayList<User> getData(int count){
+    private ArrayList<User> getData(int count) {
         ArrayList<User> users = new ArrayList<>();
-        for (int i = 0; i < count; i++){
-            User user = new User("Name " + i, 155 + (int)(Math.random() * 4));
+        int min = 10000000;
+        int max = 99999999;
+        for (int i = 0; i < count; i++) {
+            User user = new User("Name " + i, (int)(Math.random() * (max - min + 1)) + min);
             users.add(user);
         }
         return users;

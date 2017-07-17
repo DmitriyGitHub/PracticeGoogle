@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import ru.valerevich.dmitriy.practicegoogle.DataBinding.MainActivityDataBinding;
+import ru.valerevich.dmitriy.practicegoogle.databinding.MainActivityDataBinding;
 import ru.valerevich.dmitriy.practicegoogle.recyclerview.MainActivityLessonThree;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         findViewById(R.id.example_1).setOnClickListener(this);
+        findViewById(R.id.example_2).setOnClickListener(this);
     }
 
     @Override

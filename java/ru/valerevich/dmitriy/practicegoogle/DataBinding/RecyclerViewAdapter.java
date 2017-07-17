@@ -1,4 +1,4 @@
-package ru.valerevich.dmitriy.practicegoogle.DataBinding;
+package ru.valerevich.dmitriy.practicegoogle.databinding;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
@@ -10,9 +10,8 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import ru.valerevich.dmitriy.practicegoogle.DataBinding.model.User;
 import ru.valerevich.dmitriy.practicegoogle.R;
-import ru.valerevich.dmitriy.practicegoogle.databinding.ListItemDataBindBinding;
+import ru.valerevich.dmitriy.practicegoogle.databinding.model.User;
 
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
