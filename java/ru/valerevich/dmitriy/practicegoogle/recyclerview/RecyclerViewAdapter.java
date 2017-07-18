@@ -65,13 +65,24 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     private int mNumberItems;
 
+    final private ListItemClickListener mOnClickListener;
+
+    /**
+     * Интерфейс слушателя.
+     */
+    public interface ListItemClickListener {
+        void onListItemClick(int clickItemIndex);
+    }
 
     /**
      * Конструктор для RecyclerViewAdapter, который принимает количество элементов для
      * отображения/
      */
-    public RecyclerViewAdapter(int numberOfItems) {
+    public RecyclerViewAdapter(int numberOfItems, ListItemClickListener listener) {
         mNumberItems = numberOfItems;
+
+        //Слушатель нажатия на пункт
+        mOnClickListener = listener;
 
         //При создании нового Adapter устанавливаем viewHolderCount = 0
         viewHolderCount = 0;
@@ -115,7 +126,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     /**
      * Определим содержание каждого элемента из RecyclerView.Здесь должны установить
      * значения полей
-     *
+     * <p>
      * Заменяет контент отдельного view (вызывается layout manager-ом)
      */
     @Override
@@ -140,7 +151,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
      * (отсюда и название), что благоприятно сказывается на быстродействии и размере
      * используемой памяти.
      */
-    class NumberViewHolder extends RecyclerView.ViewHolder {
+    class NumberViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         // Будет отображать позицию в списке, т. е. от 0 до getItemCount() - 1
         TextView listItemNumberView;
@@ -156,6 +167,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
             listItemNumberView = (TextView) itemView.findViewById(R.id.tv_item_number);
             viewHolderIndex = (TextView) itemView.findViewById(R.id.tv_view_holder_instance);
+
+            itemView.setOnClickListener(this);
         }
 
         /**
@@ -166,5 +179,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         void bind(int listIndex) {
             listItemNumberView.setText(String.valueOf(listIndex));
         }
+
+        /**
+         * Вызывается каждый раз, когда пользователь нажимает на элемент в списке.
+         */
+        @Override
+        public void onClick(View v) {
+            int clickedPosition = getAdapterPosition();
+            mOnClickListener.onListItemClick(clickedPosition);
+        }
     }
+
 }

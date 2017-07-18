@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ru.valerevich.dmitriy.practicegoogle">
 
+    <!--Add the INTERNET permission-->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,8 +19,10 @@
             </intent-filter>
         </activity>
         <!-- lesson3 -->
-        <activity android:name=".recyclerview.MainActivityLessonThree"/>
-        <activity android:name=".databinding.MainActivityDataBinding"/>
+        <activity android:name=".recyclerview.MainActivityLessonThree" />
+        <activity android:name=".databinding.MainActivityDataBinding" />
+        <activity android:name=".lifecycle.LifeCycleActivity" />
+        <activity android:name=".githubsearch.MainGitHubSearchActivity"></activity>
     </application>
 
 </manifest>

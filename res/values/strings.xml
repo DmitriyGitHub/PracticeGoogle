@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">PracticeGoogle</string>
+    <string name="app_name">Practice</string>
     <string name="example_1">RecyclerView</string>
     <string name="action_reset">Сбросить</string>
+    <string name="search">Поиск</string>
+    <string name="error_message">Произошла ошибка попробуйте еще раз</string>
+    <string name="edit_text_info">Введите запрос, нажмите кнопку Поиск!</string>
 </resources>

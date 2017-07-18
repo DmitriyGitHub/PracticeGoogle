@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import ru.valerevich.dmitriy.practicegoogle.databinding.MainActivityDataBinding;
+import ru.valerevich.dmitriy.practicegoogle.githubsearch.MainGitHubSearchActivity;
+import ru.valerevich.dmitriy.practicegoogle.lifecycle.LifeCycleActivity;
 import ru.valerevich.dmitriy.practicegoogle.recyclerview.MainActivityLessonThree;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -18,6 +20,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         findViewById(R.id.example_1).setOnClickListener(this);
         findViewById(R.id.example_2).setOnClickListener(this);
+        findViewById(R.id.example_3).setOnClickListener(this);
+        findViewById(R.id.example_4).setOnClickListener(this);
     }
 
     @Override
@@ -27,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.example_1: activityClass = MainActivityLessonThree.class; break;
             case R.id.example_2: activityClass = MainActivityDataBinding.class; break;
+            case R.id.example_3: activityClass = LifeCycleActivity.class; break;
+            case R.id.example_4: activityClass = MainGitHubSearchActivity.class; break;
             default: activityClass = null;
         }
         if (activityClass != null) {
